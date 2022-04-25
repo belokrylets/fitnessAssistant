@@ -14,7 +14,7 @@ const RunningTimer = () => {
 
     const renderRun = () => (
         <div>
-            <p>{roundTimer}  {roundTimer > 10 ? `работаем` : `отдых`}</p>
+            <p>0:{roundTimer}  {roundTimer > 10 ? `работаем` : `отдых`}</p>
             <p>Осталось {round} раундов</p>
         </div>
     )
@@ -28,7 +28,7 @@ const RunningTimer = () => {
     return (
         <div>
             {round > 0 ? renderRun() : renderFinish()}
-            <Button className='mt-3' onClick={handleButton}>Начать заново</Button>
+            <Button variant="dark" className='mt-3' onClick={handleButton}>Начать заново</Button>
 
         </div>
     );

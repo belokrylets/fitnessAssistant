@@ -75,7 +75,7 @@ const SettingTabata = () => {
                     </ButtonGroup>
                 </div>
             </div>
-            <Button className='mt-3' onClick={() => handlerStart()}>Начать тренировку</Button>
+            <Button variant="dark" className='mt-3' onClick={() => handlerStart()}>Начать тренировку</Button>
         </div>
     );
 }

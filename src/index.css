@@ -1,13 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
-}
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #d0cdcd;
+  min-height:100vh;
 
+}
+footer {
+  background: #212529;
+  height: 100px;
+  width: 100%;
+  color:#EEEFF1;
+  display: flex;
+  align-items: center;
+
+}
+.footeClass {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .vitamins {
   display: flex;
 }
@@ -27,9 +39,34 @@ body {
 .exerciseImg {
   display: flex;
   justify-content: center;
-
 }
-.exerciseImg > img{
-
+.exerciseImg > img {
   width: 75%;
+}
+.rights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rights > p {
+  font-size: 13px;
+}
+.rights > h4 {
+  font-size: 15px;
+}
+.rights > p {
+  font-size: 9px;
+}
+
+.socialMedia > a > img {
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+}
+.aboutImg {
+  padding-top: 50px;
+  width: 50%;
+  margin-right: 70px;
+  text-align: center;
 }

@@ -12,6 +12,7 @@ import CalorieCalculator from './components/CalorieCalculator';
 import Tabata from './components/tabata/Tabata';
 import Home from './components/Home';
 import ExerciseGuide from './components/exercises/ExerciseGuide';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="tabata" element={<Tabata />} />
         <Route path="vitamins" element={<Vitamins />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

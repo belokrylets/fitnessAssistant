@@ -78,7 +78,7 @@ const CalorieCalculator = () => {
 
 
 
-                <Button variant="primary" type="submit" disabled={(!target || !activity || !gender || !weight || !growth || !age)}>
+                <Button variant="dark" type="submit" disabled={(!target || !activity || !gender || !weight || !growth || !age)}>
                     Рассчитать
                 </Button>
             </Form>
