@@ -10,12 +10,16 @@ const Navbars = () => {
           <Navbar.Brand>
             <Link className='navbar-brand' to='/' >Фитнес помощник</Link>
           </Navbar.Brand>
-          <Nav className="me-auto">
-            <Link className='nav-link' to='exerciseGuide'>Справочник упражнений</Link>
-            <Link className='nav-link' to="calorieCalculator">Калькулятор калорий</Link>
-            <Link className='nav-link' to="tabata">Табата</Link>
-            <Link className='nav-link' to="vitamins">Совместимость витаминов</Link>
-          </Nav>
+          <Navbar.Toggle aria-controls="navbarContent" />
+          <Navbar.Collapse>
+            <Nav className="me-auto">
+              <Link className='nav-link' to='exerciseGuide'>Справочник упражнений</Link>
+              <Link className='nav-link' to="calorieCalculator">Калькулятор калорий</Link>
+              <Link className='nav-link' to="tabata">Табата</Link>
+              <Link className='nav-link' to="vitamins">Совместимость витаминов</Link>
+            </Nav>
+          </Navbar.Collapse>
+
         </Container>
       </Navbar>
     </header>
