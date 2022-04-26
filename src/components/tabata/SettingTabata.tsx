@@ -20,9 +20,6 @@ const SettingTabata = () => {
 
             const i = currentRoundTimer - 1
             currentRoundTimer = i
-            // if (currentRoundTimer < 28) {
-            //     document.getElementById('end').play()
-            // }
 
             dispatch({
                 type: TabataTypes.ROUND_TIMER,
@@ -62,20 +59,30 @@ const SettingTabata = () => {
 
 
     return (
-        <div>
-            <h5>Настройка таймера</h5>
+        <div className='tabata'>
+            <div className='col-7'>
+                Табата − это тренировка с несколькими интервалами по 20 и 10 секунд.<br />
+                Сначала 20 секунд максимально интенсивной работы и 10 секунд отдыха,<br />
+                такие циклы повторяются 8 раз подряд и составляют в общей сумме 4 минуты.
+            </div>
             <div>
                 <div>
-                    {round}
-                </div>
-                <div>
-                    <ButtonGroup>
-                        <Button disabled={round <= 1} onClick={decrementRound} variant="secondary">- раунд</Button>
-                        <Button onClick={incrementRound} variant="secondary">+ раунд</Button>
-                    </ButtonGroup>
+                    <h5>Настройка таймера</h5>
+                    <div  className='settingTimer'>
+                        <div className='settingRounds mb-2'>
+                            {round}
+                        </div>
+                        <div>
+                            <ButtonGroup>
+                                <Button disabled={round <= 1} onClick={decrementRound} variant="secondary">- раунд</Button>
+                                <Button onClick={incrementRound} variant="secondary">+ раунд</Button>
+                            </ButtonGroup>
+                        </div>
+                        <Button variant="dark" className='mt-3' onClick={() => handlerStart()}>Начать тренировку</Button>
+
+                    </div>
                 </div>
             </div>
-            <Button variant="dark" className='mt-3' onClick={() => handlerStart()}>Начать тренировку</Button>
         </div>
     );
 }
