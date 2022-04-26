@@ -15,9 +15,9 @@ const Footer = () => {
                         </p>
                     </div>
                     <div className='socialMedia'>
-                        <a href='https://instagram.com/belokrylets'>
+                        {/* <a href='https://instagram.com/belokrylets'>
                             <img src='https://раллишоп.рф/wp-content/plugins/nd-shortcodes/addons/customizer/shortcodes/social/img/instagram.svg' alt='instagram' />
-                        </a>
+                        </a> */}
                         <a href='https://t.me/belokrylets'>
                             <img src='https://papik.pro/uploads/posts/2021-11/1636144616_57-papik-pro-p-logotip-telegramma-foto-58.png' alt="telegramm" />
                         </a>
