@@ -188,3 +188,12 @@ footer {
   margin: 0px;
   text-align: center;
 }
+
+.buttonUser {
+  color: #f8f9fa;
+  background-color: transparent;
+
+}
+.buttonUser:hover {
+  color: #212529;
+}

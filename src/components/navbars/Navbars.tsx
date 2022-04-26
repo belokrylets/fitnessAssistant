@@ -1,8 +1,13 @@
-import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useTypeSelector } from '../../hooks/useTypeSelector';
+import ButtonSignIn from './ButtonSignIn';
+import UserButton from './UserButton';
 
 const Navbars = () => {
+
+  const { isLogin } = useTypeSelector(state => state.personalCabinet)
+
   return (
     <header>
       <Navbar bg="dark" variant="dark" expand="lg">
@@ -18,8 +23,8 @@ const Navbars = () => {
               <Link className='nav-link' to="tabata">Табата</Link>
               <Link className='nav-link' to="vitamins">Совместимость витаминов</Link>
             </Nav>
+            {isLogin ? <UserButton /> : <ButtonSignIn />}
           </Navbar.Collapse>
-
         </Container>
       </Navbar>
     </header>

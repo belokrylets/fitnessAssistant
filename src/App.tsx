@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbars from './components/Navbars';
+import Navbars from './components/navbars/Navbars';
 import {
   BrowserRouter as Router,
   Route,
@@ -13,6 +13,7 @@ import Tabata from './components/tabata/Tabata';
 import Home from './components/Home';
 import ExerciseGuide from './components/exercises/ExerciseGuide';
 import Footer from './components/Footer';
+import PersonalCabinet from './components/personalCabinet/PersonalCabinet';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="calorieCalculator" element={<CalorieCalculator />} />
         <Route path="tabata" element={<Tabata />} />
         <Route path="vitamins" element={<Vitamins />} />
+        <Route path="personalCabinet" element={<PersonalCabinet />} />
       </Routes>
       <Footer />
     </Router>
