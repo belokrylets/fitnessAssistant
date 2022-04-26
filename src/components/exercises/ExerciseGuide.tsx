@@ -1,7 +1,9 @@
 import { Accordion, Container, ListGroup } from "react-bootstrap";
 import { useDispatch } from "react-redux";
+import { useTypeSelector } from "../../hooks/useTypeSelector";
 import { IExercise, ShowExerciseDescriptionTypes } from "../../types/showExerciseDescription";
 import ExerciseDescription from "./ExerciseDescription";
+import ExerciseFilter from "./ExerciseFilter";
 
 
 const muscleGroups = [
@@ -80,10 +82,11 @@ const muscleGroups = [
 
 const ExerciseGuide = () => {
 
+    const { place } = useTypeSelector(state => state.showExerciseDescription)
+
     const dispatch = useDispatch()
 
     const showDescription = (e: any, description: IExercise) => {
-console.log(description)
         dispatch({
             type: ShowExerciseDescriptionTypes.CHANGE_EXERCISE,
             payload: description
@@ -94,27 +97,49 @@ console.log(description)
         })
     }
 
+    const allPlace = (exercises: any) => (
+        exercises.map((exercise: IExercise) => (
+            <ListGroup.Item className='listExercises' key={exercise.id} onClick={(e) => showDescription(e, exercise)} >
+                <p>{exercise.name}</p>
+            </ListGroup.Item>
+        ))
+    )
+
+    const filterPlace = (exercises: any) => (
+        exercises
+            .filter((exercise: any) => exercise.place === place)
+            .map((exercise: IExercise) => (
+                <ListGroup.Item className='listExercises' key={exercise.id} onClick={(e) => showDescription(e, exercise)} >
+                    <p>{exercise.name}</p>
+                </ListGroup.Item>
+            ))
+    )
+
+
     return (
         <Container fluid="xxl">
             <ExerciseDescription />
+            <div className="exercises">
+                <div className="col-2">
+                    <ExerciseFilter />
+                </div>
+                <div className="col-10">
+                    <Accordion>
+                        {muscleGroups.map(({ id, value, rus, exercises }) => (
+                            <Accordion.Item eventKey={value} key={id}>
+                                <Accordion.Header>{rus}</Accordion.Header>
+                                <Accordion.Body>
 
-            <Accordion>
-                {muscleGroups.map(({ id, value, rus, exercises }) => (
-                    <Accordion.Item eventKey={value} key={id}>
-                        <Accordion.Header>{rus}</Accordion.Header>
-                        <Accordion.Body>
+                                    <ListGroup>
+                                        {place === 'all' ? allPlace(exercises) : filterPlace(exercises)}
+                                    </ListGroup>
+                                </Accordion.Body>
+                            </Accordion.Item>
+                        ))}
+                    </Accordion>
+                </div>
+            </div>
 
-                            <ListGroup>
-                                {exercises.map((exercise) => (
-                                    <ListGroup.Item className='listExercises' key={exercise.id} onClick={(e) => showDescription(e, exercise)} >
-                                        <p>{exercise.name}</p>
-                                    </ListGroup.Item>
-                                ))}
-                            </ListGroup>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                ))}
-            </Accordion>
         </Container>
     );
 }
