@@ -8,7 +8,7 @@ import {
   Routes
 } from "react-router-dom";
 import Vitamins from './components/Vitamins';
-import CalorieCalculator from './components/CalorieCalculator';
+import CalorieCalculator from './components/calorieCalculator/CalorieCalculator';
 import Tabata from './components/tabata/Tabata';
 import Home from './components/Home';
 import ExerciseGuide from './components/exercises/ExerciseGuide';
