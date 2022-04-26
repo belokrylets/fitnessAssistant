@@ -1,19 +1,59 @@
+@media screen and (min-width: 320px) and (max-width: 820px) {
+  .tabata {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabata > .col-7{
+    
+    width: 100%;
+  }
+  .tabata > .col-5{
+    margin-top: 30px;
+    width: 100%;
+  }
+  .vitamins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .vitamins > .col-7{
+    width: 100%;
+  }
+  .vitamins > .col-5{
+    margin-top: 30px;
+    width: 100%;
+  }
+  .calorieCalculator {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .calorieCalculator > .col-7{
+    width: 100%;
+  }
+  .calorieCalculator > .col-5{
+    margin: 30px 0;
+    width: 100%;
+  }
+}
+
 #root {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #d0cdcd;
-  min-height:100vh;
-
+  min-height: 100vh;
 }
 footer {
   background: #212529;
   height: 100px;
   width: 100%;
-  color:#EEEFF1;
+  color: #eeeff1;
   display: flex;
   align-items: center;
-
 }
 .footeClass {
   display: flex;
@@ -26,10 +66,31 @@ footer {
 
 .calorieCalculator {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tabata {
   display: flex;
+  justify-content: center;
+
+}
+
+.settingTimer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.settingRounds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  height: 90px;
+  width: 90px;
+  border: 2px solid #0f0f0f;
+  border-radius: 100%;
 }
 
 .listExercises {
@@ -68,5 +129,51 @@ footer {
   padding-top: 50px;
   width: 50%;
   margin-right: 70px;
+  text-align: center;
+}
+
+.timer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 30px;
+  height: 90px;
+  width: 90px;
+  border: 2px solid #0f0f0f;
+  border-radius: 100%;
+}
+.redTimer {
+  border: 2px solid #8f1919;
+  background-color: #8f1919;
+  color: #eeeff1;
+}
+.greenTimer {
+  border: 2px solid #2d9636;
+  background-color: #2d9636;
+}
+.rounds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  height: 60px;
+  width: 60px;
+  border: 2px solid #0f0f0f;
+  border-radius: 100%;
+}
+.runningTimer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.roundsLeft{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.runningTimer p {
+  margin: 0px;
   text-align: center;
 }
