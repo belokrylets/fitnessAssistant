@@ -99,7 +99,7 @@ const ExerciseGuide = () => {
 
     const allPlace = (exercises: any) => (
         exercises.map((exercise: IExercise) => (
-            <ListGroup.Item className='listExercises' key={exercise.id} onClick={(e) => showDescription(e, exercise)} >
+            <ListGroup.Item  key={exercise.id} onClick={(e) => showDescription(e, exercise)} action >
                 <p>{exercise.name}</p>
             </ListGroup.Item>
         ))
@@ -109,7 +109,7 @@ const ExerciseGuide = () => {
         exercises
             .filter((exercise: any) => exercise.place === place)
             .map((exercise: IExercise) => (
-                <ListGroup.Item className='listExercises' key={exercise.id} onClick={(e) => showDescription(e, exercise)} >
+                <ListGroup.Item key={exercise.id} onClick={(e) => showDescription(e, exercise)} action>
                     <p>{exercise.name}</p>
                 </ListGroup.Item>
             ))

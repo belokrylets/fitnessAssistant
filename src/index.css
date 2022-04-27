@@ -42,12 +42,21 @@
     margin: 20px 0;
   }
   .exercises > .col-10 {
-   width: 100%;
-   margin: 20px 0 0 0;
+    width: 100%;
+    margin: 20px 0 0 0;
   }
   .exercises > .col-2 {
     width: 100%;
-   }
+  }
+  .personalCabinet {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .personalCabinet > .col-8 {
+    margin: 20px 0 0 0;
+    width: 100%;
+  }
 }
 
 #root {
@@ -104,9 +113,6 @@ footer {
 
 .exercises {
   display: flex;
-}
-.listExercises {
-  cursor: pointer;
 }
 
 .exerciseImg {
@@ -192,8 +198,34 @@ footer {
 .buttonUser {
   color: #f8f9fa;
   background-color: transparent;
-
 }
 .buttonUser:hover {
   color: #212529;
+}
+
+.list {
+  position: relative;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #212529;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+}
+.list:active {
+  color: #f8f9fa;
+  background-color: #212529;
+}
+.programDay {
+  display: flex;
+  justify-content: space-between;
+}
+.programDay > button {
+  color: #212529;
+  background-color: transparent;
+  border: none;
+}
+
+.personalCabinet {
+  display: flex;
 }

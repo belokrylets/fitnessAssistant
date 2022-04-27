@@ -7,7 +7,7 @@ const Result = () => {
 
     const dispatch = useDispatch();
 
-    const { mode, target, activity, gender, weight, growth, age, result } = useTypeSelector(state => state.calorieCalculator)
+    const { result } = useTypeSelector(state => state.calorieCalculator)
 
     const calculateAgain = (event: any) => {
         event.preventDefault();

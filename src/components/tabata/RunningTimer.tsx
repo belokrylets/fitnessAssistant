@@ -3,9 +3,7 @@ import { Button } from 'react-bootstrap';
 import { useDispatch } from 'react-redux';
 import { useTypeSelector } from '../../hooks/useTypeSelector';
 import { TabataTypes } from '../../types/tabata';
-import rest from '../../media/rest.wav'
-import finish from '../../media/finish.wav'
-import train from '../../media/train.wav'
+
 
 const RunningTimer = () => {
     const dispatch = useDispatch();
@@ -18,9 +16,6 @@ const RunningTimer = () => {
 
     const renderRun = () => (
         <div className='runningTimer'>
-            {roundTimer === 30 && round > 0 ? <audio autoPlay src={train} /> : null}
-            {roundTimer < 11 ? <audio autoPlay src={rest} /> : null}
-            {round === 0 ? <audio autoPlay src={finish} /> : null}
             <div>
                 <div>
                     <p>{roundTimer > 10 ? `Работаем` : `Отдых`}</p>
@@ -31,7 +26,7 @@ const RunningTimer = () => {
                 })}>
 
                     <div>
-                        0:{roundTimer < 10 ? 0 : null}{roundTimer} {/* <p>  {roundTimer > 10 ? `работаем` : `отдых`}</p> */}
+                        0:{roundTimer < 10 ? 0 : null}{roundTimer}
                     </div>
                 </div>
             </div>

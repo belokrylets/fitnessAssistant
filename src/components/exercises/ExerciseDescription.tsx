@@ -43,7 +43,7 @@ const ExerciseDescription = () => {
                 </div>
             </Modal.Body>
             <Modal.Footer>
-                <Button onClick={hideDeccription} >Закрыть</Button>
+                <Button  variant="dark" onClick={hideDeccription} >Закрыть</Button>
             </Modal.Footer>
         </Modal>
     );

@@ -7,7 +7,7 @@ import { CalorieCalculatorTypes } from "../../types/calorieCalculator";
 const DataInput = () => {
 
     const dispatch = useDispatch();
-    const { mode, target, activity, gender, weight, growth, age, result } = useTypeSelector(state => state.calorieCalculator)
+    const { target, activity, gender, weight, growth, age } = useTypeSelector(state => state.calorieCalculator)
 
     const getResult = (event: any) => {
         event.preventDefault();
